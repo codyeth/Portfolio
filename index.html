@@ -148,6 +148,12 @@
       position: relative;
       box-shadow: 0 0 40px rgba(124,58,237,0.4), 0 0 80px rgba(6,182,212,0.2);
       animation: avatarGlow 3s ease-in-out infinite alternate;
+      overflow: hidden;
+    }
+    .hero-avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .hero-avatar::before {
       content: '';
@@ -818,7 +824,9 @@
       <span class="dot"></span>
       Available for Web3 Opportunities
     </div>
-    <div class="hero-avatar">NQ</div>
+    <div class="hero-avatar">
+      <img src="avatar.jpg" alt="Nguyen Van Quan">
+    </div>
     <h1 class="hero-title">
       Nguyen Van <span>Quan</span>
     </h1>
@@ -843,10 +851,10 @@
       <a href="https://www.facebook.com/nguyenvan.quan/" target="_blank" class="social-link" title="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a href="https://t.me" target="_blank" class="social-link" title="Telegram">
+      <a href="https://t.me/Codydoteth" target="_blank" class="social-link" title="Telegram">
         <i class="fab fa-telegram-plane"></i>
       </a>
-      <a href="https://twitter.com" target="_blank" class="social-link" title="X (Twitter)">
+      <a href="https://x.com/Codydoteth" target="_blank" class="social-link" title="X (Twitter)">
         <i class="fab fa-x-twitter"></i>
       </a>
     </div>

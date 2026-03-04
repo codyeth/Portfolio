@@ -68,29 +68,43 @@ body {
 }
 
 /* ── HERO BLOB ANIMATIONS ── */
+/* NOTE: opacity is NOT animated here — it's set via rgba() in the background.
+   Mixing CSS opacity with rgba would multiply them and make blobs near-invisible. */
 
 @keyframes blob-1 {
-  0%, 100% { transform: translate(0%, 0%) scale(1);    opacity: 0.18; }
-  25%       { transform: translate(8%, -12%) scale(1.15); opacity: 0.28; }
-  50%       { transform: translate(-5%, 8%) scale(0.92); opacity: 0.14; }
-  75%       { transform: translate(12%, 5%) scale(1.08);  opacity: 0.22; }
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  25%       { transform: translate(8%, -12%) scale(1.18); }
+  50%       { transform: translate(-6%, 9%) scale(0.9); }
+  75%       { transform: translate(13%, 5%) scale(1.1); }
 }
 
 @keyframes blob-2 {
-  0%, 100% { transform: translate(0%, 0%) scale(1);     opacity: 0.14; }
-  33%       { transform: translate(-10%, 6%) scale(1.12); opacity: 0.22; }
-  66%       { transform: translate(6%, -10%) scale(0.88); opacity: 0.10; }
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  33%       { transform: translate(-11%, 7%) scale(1.14); }
+  66%       { transform: translate(7%, -11%) scale(0.86); }
 }
 
 @keyframes blob-3 {
-  0%, 100% { transform: translate(0%, 0%) scale(1);    opacity: 0.10; }
-  40%       { transform: translate(5%, 10%) scale(1.2); opacity: 0.18; }
-  80%       { transform: translate(-8%, -5%) scale(0.9); opacity: 0.12; }
+  0%, 100% { transform: translate(0%, 0%) scale(1); }
+  40%       { transform: translate(6%, 11%) scale(1.22); }
+  80%       { transform: translate(-9%, -6%) scale(0.88); }
 }
 
 @keyframes hero-vignette-pulse {
-  0%, 100% { opacity: 0.55; }
-  50%       { opacity: 0.70; }
+  0%, 100% { opacity: 0.6; }
+  50%       { opacity: 0.75; }
+}
+
+/* ── SCROLL REVEAL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ── GRADIENT UTILITIES ── */
@@ -144,13 +158,3 @@ body {
   margin-bottom: 1rem;
 }
 
-/* ── REVEAL ANIMATION ON SCROLL ── */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}

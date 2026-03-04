@@ -1,6 +1,7 @@
 import AppWrapper from '@/components/AppWrapper'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 // ── DATA ──────────────────────────────────────────────
 
@@ -158,7 +159,7 @@ const ACHIEVEMENTS = [
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-xs uppercase tracking-[0.3em] mb-4" style={{ color: 'var(--muted)' }}>
+    <p className="reveal text-xs uppercase tracking-[0.3em] mb-4" style={{ color: 'var(--muted)' }}>
       {children}
     </p>
   )
@@ -174,7 +175,7 @@ function AboutSection() {
   return (
     <section id="about" className="px-6 py-20 md:py-28 max-w-5xl mx-auto">
       <SectionLabel>About Me</SectionLabel>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-10" style={{ color: 'var(--text)' }}>
+      <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-10" style={{ color: 'var(--text)', transitionDelay: '80ms' }}>
         Web3 Native{' '}
         <span
           style={{
@@ -189,7 +190,7 @@ function AboutSection() {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        <div className="space-y-5 text-base leading-relaxed" style={{ color: 'var(--muted)' }}>
+        <div className="reveal space-y-5 text-base leading-relaxed" style={{ color: 'var(--muted)', transitionDelay: '160ms' }}>
           <p>
             <strong style={{ color: 'var(--text)' }}>Web3 leader with 5+ years of experience</strong> managing teams and shipping products across{' '}
             <strong style={{ color: 'var(--text)' }}>10+ crypto projects</strong> in DeFi, NFTs, and GameFi since 2020.
@@ -229,11 +230,11 @@ function AboutSection() {
               { n: '10+', label: 'Crypto Projects' },
               { n: '$2.5M', label: 'Volume Generated' },
               { n: '2M+', label: 'Users Reached' },
-            ].map(({ n, label }) => (
+            ].map(({ n, label }, i) => (
               <div
                 key={label}
-                className="p-4 rounded-xl border"
-                style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+                className="reveal p-4 rounded-xl border transition-transform duration-300 hover:scale-[1.04] hover:-translate-y-0.5 cursor-default"
+                style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: `${240 + i * 80}ms` }}
               >
                 <div
                   className="text-2xl font-display italic mb-1"
@@ -262,7 +263,7 @@ function ExperienceSection() {
   return (
     <section id="experience" className="px-6 py-20 md:py-28 max-w-5xl mx-auto">
       <SectionLabel>Career</SectionLabel>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)' }}>
+      <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)', transitionDelay: '80ms' }}>
         Work{' '}
         <span
           style={{
@@ -298,8 +299,8 @@ function ExperienceSection() {
               />
 
               <div
-                className="rounded-xl border p-5 md:p-6 transition-colors duration-200 hover:border-white/10"
-                style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+                className="reveal rounded-xl border p-5 md:p-6 transition-all duration-300 hover:scale-[1.015] hover:-translate-y-1 hover:border-white/10"
+                style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: `${i * 100}ms` }}
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
                   <div>
@@ -370,7 +371,7 @@ function AchievementsSection() {
   return (
     <section id="achievements" className="px-6 py-20 md:py-28 max-w-5xl mx-auto">
       <SectionLabel>Results</SectionLabel>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)' }}>
+      <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)', transitionDelay: '80ms' }}>
         Key{' '}
         <span
           style={{
@@ -388,11 +389,11 @@ function AchievementsSection() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {ACHIEVEMENTS.map(({ stat, label, desc }) => (
+        {ACHIEVEMENTS.map(({ stat, label, desc }, i) => (
           <div
             key={label}
-            className="p-5 rounded-xl border transition-all duration-300 hover:-translate-y-1 hover:border-white/10 group"
-            style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+            className="reveal p-5 rounded-xl border transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1.5 hover:border-white/10 cursor-default group"
+            style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: `${i * 80}ms` }}
           >
             <div
               className="text-3xl md:text-4xl font-display italic mb-2 transition-all duration-300"
@@ -424,13 +425,13 @@ function EducationSection() {
   return (
     <section id="education" className="px-6 py-20 md:py-28 max-w-5xl mx-auto">
       <SectionLabel>Academic Background</SectionLabel>
-      <h2 className="text-4xl md:text-5xl font-display italic leading-tight mb-10" style={{ color: 'var(--text)' }}>
+      <h2 className="reveal text-4xl md:text-5xl font-display italic leading-tight mb-10" style={{ color: 'var(--text)', transitionDelay: '80ms' }}>
         Education
       </h2>
 
       <div
-        className="rounded-xl border p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
-        style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+        className="reveal rounded-xl border p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6 transition-all duration-300 hover:scale-[1.015] hover:-translate-y-1 hover:border-white/10"
+        style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: '160ms' }}
       >
         <div>
           <div className="text-lg font-medium mb-1" style={{ color: 'var(--text)' }}>
@@ -460,7 +461,7 @@ function ContactSection() {
   return (
     <section id="contact" className="px-6 py-20 md:py-28 max-w-5xl mx-auto">
       <SectionLabel>Get in Touch</SectionLabel>
-      <h2 className="text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)' }}>
+      <h2 className="reveal text-4xl md:text-5xl lg:text-6xl font-display italic leading-tight mb-4" style={{ color: 'var(--text)', transitionDelay: '80ms' }}>
         Let&apos;s{' '}
         <span
           style={{
@@ -484,11 +485,11 @@ function ContactSection() {
           { icon: '📍', label: 'Location', value: 'Thanh Xuan, Hanoi, Vietnam', href: null },
           { icon: '✈', label: 'Telegram', value: '@Codydoteth', href: 'https://t.me/Codydoteth' },
           { icon: '𝕏', label: 'Twitter / X', value: '@Codydoteth', href: 'https://x.com/Codydoteth' },
-        ].map(({ icon, label, value, href }) => (
+        ].map(({ icon, label, value, href }, i) => (
           <div
             key={label}
-            className="p-5 rounded-xl border transition-all duration-200 hover:border-white/10"
-            style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+            className="reveal p-5 rounded-xl border transition-all duration-300 hover:scale-[1.04] hover:-translate-y-1 hover:border-white/10"
+            style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: `${160 + i * 80}ms` }}
           >
             <div className="text-xl mb-2">{icon}</div>
             <div className="text-xs uppercase tracking-[0.15em] mb-1" style={{ color: 'var(--muted)' }}>
@@ -515,8 +516,8 @@ function ContactSection() {
 
       {/* Availability banner */}
       <div
-        className="rounded-xl border p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
-        style={{ background: 'var(--surface)', borderColor: 'var(--stroke)' }}
+        className="reveal rounded-xl border p-6 md:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 transition-all duration-300 hover:scale-[1.015] hover:border-white/10"
+        style={{ background: 'var(--surface)', borderColor: 'var(--stroke)', transitionDelay: '560ms' }}
       >
         <div>
           <div
@@ -573,6 +574,7 @@ function Footer() {
 export default function Page() {
   return (
     <AppWrapper>
+      <ScrollAnimations />
       <Navbar />
       <main>
         <HeroSection />

@@ -51,18 +51,18 @@ export default function HeroSection() {
 
         <div className="absolute rounded-full pointer-events-none" style={{
           width: '70vw', height: '70vw', top: '-20%', left: '-15%',
-          background: 'radial-gradient(circle, rgba(78,133,191,0.35) 0%, transparent 70%)',
-          filter: 'blur(60px)', animation: 'blob-1 18s ease-in-out infinite',
+          background: 'radial-gradient(circle, rgba(78,133,191,0.75) 0%, transparent 70%)',
+          filter: 'blur(45px)', animation: 'blob-1 18s ease-in-out infinite',
         }} />
         <div className="absolute rounded-full pointer-events-none" style={{
           width: '55vw', height: '55vw', bottom: '-10%', right: '-10%',
-          background: 'radial-gradient(circle, rgba(137,170,204,0.30) 0%, transparent 70%)',
-          filter: 'blur(80px)', animation: 'blob-2 22s ease-in-out infinite 3s',
+          background: 'radial-gradient(circle, rgba(137,170,204,0.70) 0%, transparent 70%)',
+          filter: 'blur(55px)', animation: 'blob-2 22s ease-in-out infinite 3s',
         }} />
         <div className="absolute rounded-full pointer-events-none" style={{
           width: '40vw', height: '40vw', top: '30%', left: '42%',
-          background: 'radial-gradient(circle, rgba(30,80,140,0.22) 0%, transparent 70%)',
-          filter: 'blur(50px)', animation: 'blob-3 14s ease-in-out infinite 7s',
+          background: 'radial-gradient(circle, rgba(30,100,200,0.60) 0%, transparent 70%)',
+          filter: 'blur(40px)', animation: 'blob-3 14s ease-in-out infinite 7s',
         }} />
 
         <div className="absolute inset-0 pointer-events-none" style={{

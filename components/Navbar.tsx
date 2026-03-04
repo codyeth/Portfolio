@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const NAV_LINKS = ['Home', 'About', 'Experience', 'Contact']
 
@@ -72,16 +73,14 @@ export default function Navbar() {
           style={{ background: 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)' }}
           aria-label="Home"
         >
-          <div
-            className="w-full h-full rounded-full flex items-center justify-center"
-            style={{ background: 'var(--bg)' }}
-          >
-            <span
-              className="text-[13px] font-display italic tracking-tighter transition-transform duration-200 group-hover:scale-110"
-              style={{ color: 'var(--text)' }}
-            >
-              CY
-            </span>
+          <div className="w-full h-full rounded-full overflow-hidden">
+            <Image
+              src="/avatar.jpg"
+              alt="Cody"
+              width={36}
+              height={36}
+              className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-110"
+            />
           </div>
         </button>
 

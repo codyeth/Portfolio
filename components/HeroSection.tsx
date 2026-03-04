@@ -5,6 +5,21 @@ import { useEffect, useRef, useState } from 'react'
 const ROLES = ['PM', 'Builder', 'Founder', 'BDM']
 const MUX_ID = 'Gs3wZfrtz6ZfqZqQ02c02Z7lugV00FGZvRpcqFTel66r3g'
 
+const PARTICLES = [
+  { left: '5%',  delay: 0,   dur: 10, size: 2 },
+  { left: '12%', delay: 3,   dur: 13, size: 3 },
+  { left: '20%', delay: 7,   dur: 9,  size: 2 },
+  { left: '28%', delay: 1.5, dur: 12, size: 2 },
+  { left: '37%', delay: 5,   dur: 11, size: 3 },
+  { left: '45%', delay: 9,   dur: 14, size: 2 },
+  { left: '55%', delay: 2,   dur: 10, size: 2 },
+  { left: '63%', delay: 6,   dur: 13, size: 3 },
+  { left: '72%', delay: 0.5, dur: 9,  size: 2 },
+  { left: '80%', delay: 4,   dur: 12, size: 2 },
+  { left: '88%', delay: 8,   dur: 11, size: 3 },
+  { left: '95%', delay: 2.5, dur: 14, size: 2 },
+]
+
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null)
   const [roleIndex, setRoleIndex] = useState(0)
@@ -64,6 +79,52 @@ export default function HeroSection() {
           background: 'radial-gradient(circle, rgba(30,100,200,0.60) 0%, transparent 70%)',
           filter: 'blur(40px)', animation: 'blob-3 14s ease-in-out infinite 7s',
         }} />
+        <div className="absolute rounded-full pointer-events-none" style={{
+          width: '45vw', height: '45vw', bottom: '0%', left: '-5%',
+          background: 'radial-gradient(circle, rgba(90,50,180,0.45) 0%, transparent 70%)',
+          filter: 'blur(60px)', animation: 'blob-4 20s ease-in-out infinite 4s',
+        }} />
+        <div className="absolute rounded-full pointer-events-none" style={{
+          width: '50vw', height: '50vw', top: '-10%', right: '-15%',
+          background: 'radial-gradient(circle, rgba(40,110,210,0.40) 0%, transparent 70%)',
+          filter: 'blur(65px)', animation: 'blob-5 28s ease-in-out infinite 10s',
+        }} />
+
+        {/* Aurora sweep lines */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div style={{
+            position: 'absolute', top: '28%', left: 0,
+            width: '35%', height: '1px',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(137,170,204,0.55) 50%, transparent 100%)',
+            filter: 'blur(2px)',
+            animation: 'aurora-sweep 14s ease-in-out infinite',
+          }} />
+          <div style={{
+            position: 'absolute', top: '62%', left: 0,
+            width: '25%', height: '1px',
+            background: 'linear-gradient(90deg, transparent 0%, rgba(78,133,191,0.45) 50%, transparent 100%)',
+            filter: 'blur(2px)',
+            animation: 'aurora-sweep 20s ease-in-out infinite 7s',
+          }} />
+        </div>
+
+        {/* Floating particles */}
+        {PARTICLES.map((p, i) => (
+          <div key={i} className="absolute pointer-events-none rounded-full" style={{
+            left: p.left, bottom: '-6px',
+            width: `${p.size}px`, height: `${p.size}px`,
+            background: i % 3 === 0
+              ? 'rgba(137,170,204,0.85)'
+              : i % 3 === 1
+              ? 'rgba(78,133,191,0.75)'
+              : 'rgba(200,220,245,0.70)',
+            boxShadow: `0 0 ${p.size * 3}px ${p.size}px ${i % 2 === 0 ? 'rgba(137,170,204,0.3)' : 'rgba(78,133,191,0.3)'}`,
+            animation: `float-particle ${p.dur}s ease-in-out infinite ${p.delay}s`,
+          }} />
+        ))}
+
+        {/* Grain texture */}
+        <div className="absolute inset-0 pointer-events-none hero-grain" />
 
         <div className="absolute inset-0 pointer-events-none" style={{
           background: 'radial-gradient(ellipse 65% 70% at 50% 45%, transparent 30%, rgba(0,0,0,0.55) 100%)',

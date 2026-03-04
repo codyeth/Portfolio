@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[data-theme="dark"] {
+  /* Full hex values — used by inline styles and CSS */
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --text: #f5f5f5;
+  --muted: #888888;
+  --accent: #f5f5f5;
+  --stroke: #1f1f1f;
+
+  /* RGB channels — required for Tailwind opacity modifiers (e.g. bg-stroke/50) */
+  --bg-rgb: 10 10 10;
+  --surface-rgb: 20 20 20;
+  --text-rgb: 245 245 245;
+  --muted-rgb: 136 136 136;
+  --accent-rgb: 245 245 245;
+  --stroke-rgb: 31 31 31;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--stroke);
+  border-radius: 2px;
+}
+
+/* ── KEYFRAME ANIMATIONS ── */
+
+@keyframes scroll-down {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
+}
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  0%   { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+/* ── GRADIENT UTILITIES ── */
+.gradient-accent {
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── GRADIENT BORDER BUTTON ── */
+.gradient-border-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.gradient-border-wrap .gradient-ring {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #89AACC 0%, #4E85BF 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gradient-border-wrap:hover .gradient-ring {
+  opacity: 1;
+}
+
+/* ── TIMELINE ── */
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--stroke);
+}
+
+/* ── SECTION UTILITIES ── */
+.section-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 1rem;
+}
+
+/* ── REVEAL ANIMATION ON SCROLL ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

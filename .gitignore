@@ -1,5 +1,8 @@
 node_modules/
-extract_pdf.mjs
-package.json
-package-lock.json
-NguyenVanQuan-CV.pdf
+/.next/
+/out/
+.env*
+.DS_Store
+.vercel
+next-env.d.ts
+*.tsbuildinfo

@@ -115,7 +115,9 @@ export default function Navbar() {
             }}
           />
           <a
-            href="mailto:codyethwork@gmail.com"
+            href="https://t.me/Codydoteth"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative z-10 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-muted hover:text-text transition-colors duration-200"
             style={{
               background: 'var(--surface)',

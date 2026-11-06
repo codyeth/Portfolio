@@ -1,8 +1,10 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+import headshot from '@/public/cody-headshot.png'
 
-const ROLES = ['PM', 'Builder', 'Founder', 'BDM']
+const ROLES = ['PM', 'Builder', 'Founder', 'BDM', 'Marketing Lead']
 const MUX_ID = 'Gs3wZfrtz6ZfqZqQ02c02Z7lugV00FGZvRpcqFTel66r3g'
 
 const PARTICLES = [
@@ -53,7 +55,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section ref={heroRef} id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <section ref={heroRef} id="home" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-28 pb-36">
 
       <div className="absolute inset-0 z-0">
         <video autoPlay muted loop playsInline
@@ -142,9 +144,21 @@ export default function HeroSection() {
           Portfolio
         </p>
 
-        <h1 className="name-reveal text-6xl md:text-8xl lg:text-9xl font-display italic leading-[0.9] tracking-tight mb-6"
+        <div className="name-reveal relative mb-6 h-32 w-32 md:h-40 md:w-40 lg:h-44 lg:w-44 shrink-0 overflow-hidden rounded-full border-2 border-white/30 shadow-[0_0_50px_rgba(137,170,204,0.25)]">
+          <Image
+            src={headshot}
+            alt="Cody wearing a navy suit"
+            fill
+            priority
+            sizes="(min-width: 1024px) 176px, (min-width: 768px) 160px, 128px"
+            className="object-cover"
+          />
+        </div>
+
+        <h1 className="name-reveal text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display italic leading-tight tracking-tight mb-6"
           style={{ color: '#ffffff', textShadow: '0 2px 40px rgba(0,0,0,0.5)' }}>
-          Cody
+          Nguyễn Văn Quân
+          <span className="block mt-2 text-3xl md:text-4xl lg:text-5xl">(Cody)</span>
         </h1>
 
         <p className="blur-in text-lg md:text-xl lg:text-2xl mb-10"

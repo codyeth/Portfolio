@@ -9,12 +9,14 @@ const SKILLS = [
   'Project Management', 'Business Development', 'Web3 / Crypto',
   'DeFi', 'NFT', 'GameFi', 'Go-to-Market', 'Community Growth',
   'KOL Management', 'Tokenomics', 'Marketing Strategy', 'Team Leadership',
+  'AI Tools', 'Workflow Automation', 'Internal Tool Development',
+  'Product Strategy', 'Cross-functional Coordination',
 ]
 
 const EXPERIENCE = [
   {
-    period: 'Nov 2025 — Present',
-    current: true,
+    period: 'Nov 2025 — Nov 2026',
+    current: false,
     company: 'Nexira DAEP',
     role: 'Head of Business Development',
     project: null,
@@ -196,10 +198,18 @@ function AboutSection() {
             <strong style={{ color: 'var(--text)' }}>10+ crypto projects</strong> in DeFi, NFTs, and GameFi since 2020.
           </p>
           <p>
-            Skilled at planning creative go-to-market strategies, solving real-time product issues, and optimizing every part of the user and operational journey.
+            Strong at shaping product strategy, contributing actionable ideas, and building go-to-market plans that translate into effective execution with marketing teams.
           </p>
           <p>
-            Led teams of 10+ people with a focus on speed, quality, and efficiency — consistently delivering results in fast-moving environments.
+            Worked with and built connections with{' '}
+            <strong style={{ color: 'var(--text)' }}>1,000+ KOLs worldwide, including Vietnam</strong>, supporting partnerships and marketing campaigns across global markets.
+          </p>
+          <p>
+            Proficient in using AI tools to streamline day-to-day work and independently building internal tools that help teams work{' '}
+            <strong style={{ color: 'var(--text)' }}>3–4× faster</strong>.
+          </p>
+          <p>
+            Led teams of 10+ people, coordinating workflows and assigning clear tasks to align responsibilities, strengthen collaboration, and deliver efficiently in fast-moving environments.
           </p>
         </div>
 
@@ -475,16 +485,16 @@ function ContactSection() {
         </span>
       </h2>
       <p className="text-sm md:text-base mb-14 max-w-md" style={{ color: 'var(--muted)' }}>
-        Whether you have a Web3 project, a business opportunity, or just want to talk crypto — I&apos;m open to conversations.
+        Whether you have a Web2 or Web3 project, a business opportunity, or an idea to explore — I&apos;m open to conversations.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
         {[
           { icon: '✉', label: 'Email', value: 'codyethwork@gmail.com', href: 'mailto:codyethwork@gmail.com' },
           { icon: '📱', label: 'Phone', value: '+84 354 770 896', href: 'tel:+84354770896' },
-          { icon: '📍', label: 'Location', value: 'Thanh Xuan, Hanoi, Vietnam', href: null },
+          { icon: '📍', label: 'Current Address', value: 'Nguyễn Xiển, Thanh Trì, Hà Nội', href: null },
           { icon: '✈', label: 'Telegram', value: '@Codydoteth', href: 'https://t.me/Codydoteth' },
-          { icon: '𝕏', label: 'Twitter / X', value: '@Codydoteth', href: 'https://x.com/Codydoteth' },
+          { icon: '🎂', label: 'Date of Birth', value: '28/03/1999', href: null },
         ].map(({ icon, label, value, href }, i) => (
           <div
             key={label}
@@ -533,7 +543,7 @@ function ContactSection() {
           </div>
           <div className="text-sm" style={{ color: 'var(--muted)' }}>
             Currently open to{' '}
-            <strong style={{ color: 'var(--text)' }}>PM, BDM, and Web3 leadership roles</strong>. If you&apos;re building something in the crypto space, let&apos;s talk.
+            <strong style={{ color: 'var(--text)' }}>PM, BDM, Marketing Lead, and leadership roles across Web2 and Web3</strong>. If you&apos;re building a product or growing a team, let&apos;s talk.
           </div>
         </div>
         <div className="group relative inline-flex rounded-full flex-shrink-0">
@@ -542,7 +552,9 @@ function ContactSection() {
             style={{ inset: '-2px', background: 'linear-gradient(90deg, #89AACC 0%, #4E85BF 100%)' }}
           />
           <a
-            href="mailto:codyethwork@gmail.com"
+            href="https://t.me/Codydoteth"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative z-10 rounded-full px-6 py-3 text-sm font-medium transition-all duration-300"
             style={{ background: 'var(--text)', color: 'var(--bg)' }}
           >

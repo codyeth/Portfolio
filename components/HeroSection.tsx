@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import headshot from '@/public/cody-headshot.png'
 
-const ROLES = ['PM', 'Builder', 'Founder', 'BDM', 'Marketing Lead']
+const ROLES = ['Marketing Lead', 'Business Development Manager', 'Project Manager', 'Founder', 'Builder']
 const MUX_ID = 'Gs3wZfrtz6ZfqZqQ02c02Z7lugV00FGZvRpcqFTel66r3g'
 
 const PARTICLES = [
@@ -170,9 +170,9 @@ export default function HeroSection() {
           based in Hanoi.
         </p>
 
-        <p className="blur-in text-sm md:text-base leading-relaxed max-w-md mb-12"
+        <p className="blur-in text-left text-sm md:text-base leading-relaxed max-w-md mb-12"
           style={{ color: 'rgba(245,245,245,0.65)', textShadow: '0 1px 8px rgba(0,0,0,0.35)' }}>
-          Web3 leader shipping products across DeFi, NFTs, and GameFi. Focused on growth, community, and the nuances that bring systems to life.
+          Web3 business leader with hands-on experience and in-depth research across DeFi, NFTs, and GameFi. Skilled in product strategy, strategic partnerships, and go-to-market execution. Focused on driving growth, building communities, and exploring new opportunities in emerging sectors such as Real World Assets (RWA).
         </p>
 
         <div className="blur-in flex items-center gap-4 flex-wrap justify-center">

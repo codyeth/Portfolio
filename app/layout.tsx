@@ -19,11 +19,11 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'Cody — Web3 PM & BDM',
   description:
-    'Web3 Project Manager & Business Development Manager with 5+ years building DeFi, NFT, and GameFi products.',
+    'Web3 Project Manager & Business Development Manager with 6+ years building DeFi, NFT, and GameFi products.',
   openGraph: {
     title: 'Cody — Web3 PM & BDM',
     description:
-      'Web3 leader with 5+ years managing teams and shipping products across 10+ crypto projects.',
+      'Web3 leader with 6+ years managing teams and shipping products across 10+ Web3 projects.',
     type: 'website',
   },
 }

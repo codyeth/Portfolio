@@ -6,7 +6,7 @@ import ScrollAnimations from '@/components/ScrollAnimations'
 // ── DATA ──────────────────────────────────────────────
 
 const SKILLS = [
-  'Project Management', 'Business Development', 'Web3 / Crypto',
+  'Project Management', 'Business Development', 'Web3',
   'DeFi', 'NFT', 'GameFi', 'Go-to-Market', 'Community Growth',
   'KOL Management', 'Tokenomics', 'Marketing Strategy', 'Team Leadership',
   'AI Tools', 'Workflow Automation', 'Internal Tool Development',
@@ -37,7 +37,7 @@ const EXPERIENCE = [
     bullets: [
       'Managed a 15-member team (devs, designers, BD, QA) to deliver a blockchain-based game',
       'Led sprints, tracked progress, and resolved blockers to keep development on schedule',
-      'Worked with tokenomics and game design to align gameplay with crypto incentives',
+      'Worked with tokenomics and game design to align gameplay with Web3 incentives',
       'Community growth: 100K+ users, $100K USD in volume sales',
     ],
   },
@@ -67,7 +67,7 @@ const EXPERIENCE = [
       'Managed and trained a BD team of 10+ members',
       'Built marketing strategies to attract users, boost product sales, and optimize cost',
       'Collaborated with ecosystem partners to launch cross-marketing campaigns',
-      'Booked and coordinated Global KOLs to amplify project visibility in the crypto community',
+      'Booked and coordinated Global KOLs to amplify project visibility in the Web3 community',
     ],
   },
   {
@@ -106,7 +106,7 @@ const EXPERIENCE = [
     project: 'Galaxy Survival & Dansa — GameFi',
     tags: ['Research', 'Whitepaper', 'Community Mgmt', 'GameFi'],
     bullets: [
-      'Conducted in-depth market and trend research on the GameFi and crypto gaming landscape',
+      'Conducted in-depth market and trend research on the GameFi and Web3 gaming landscape',
       'Contributed to whitepaper development including game mechanics, tokenomics, and business model',
       'Supported KOL outreach and booking efforts, coordinating promotional campaigns',
       'Managed and nurtured the project\'s community across social platforms',
@@ -194,11 +194,14 @@ function AboutSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <div className="reveal space-y-5 text-base leading-relaxed" style={{ color: 'var(--muted)', transitionDelay: '160ms' }}>
           <p>
-            <strong style={{ color: 'var(--text)' }}>Web3 leader with 5+ years of experience</strong> managing teams and shipping products across{' '}
-            <strong style={{ color: 'var(--text)' }}>10+ crypto projects</strong> in DeFi, NFTs, and GameFi since 2020.
+            <strong style={{ color: 'var(--text)' }}>Web3 leader with 6+ years of experience</strong> managing teams and shipping products across{' '}
+            <strong style={{ color: 'var(--text)' }}>10+ Web3 projects</strong> in DeFi, NFTs, and GameFi since 2020.
           </p>
           <p>
             Strong at shaping product strategy, contributing actionable ideas, and building go-to-market plans that translate into effective execution with marketing teams.
+          </p>
+          <p>
+            Interested in bringing this experience to Real World Asset (RWA) projects, particularly in product positioning, partnership development, community growth, and go-to-market execution.
           </p>
           <p>
             Worked with and built connections with{' '}
@@ -236,8 +239,8 @@ function AboutSection() {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4 mt-8">
             {[
-              { n: '5+', label: 'Years in Crypto' },
-              { n: '10+', label: 'Crypto Projects' },
+              { n: '6+', label: 'Years in Web3' },
+              { n: '10+', label: 'Web3 Projects' },
               { n: '$2.5M', label: 'Volume Generated' },
               { n: '2M+', label: 'Users Reached' },
             ].map(({ n, label }, i) => (
@@ -543,7 +546,7 @@ function ContactSection() {
           </div>
           <div className="text-sm" style={{ color: 'var(--muted)' }}>
             Currently open to{' '}
-            <strong style={{ color: 'var(--text)' }}>PM, BDM, Marketing Lead, and leadership roles across Web2 and Web3</strong>. If you&apos;re building a product or growing a team, let&apos;s talk.
+            <strong style={{ color: 'var(--text)' }}>Project Manager, Business Development Manager, Marketing Lead, and leadership roles across Web2 and Web3</strong>, including opportunities in Real World Assets (RWA). If you&apos;re building a product or growing a team, let&apos;s talk.
           </div>
         </div>
         <div className="group relative inline-flex rounded-full flex-shrink-0">
@@ -575,7 +578,7 @@ function Footer() {
       style={{ borderColor: 'var(--stroke)' }}
     >
       <p className="text-xs" style={{ color: 'var(--muted)' }}>
-        © 2026 Nguyen Van Quan · Web3 PM &amp; BDM · Built with passion for the decentralized future
+        © 2026 Nguyễn Văn Quân · Project Manager &amp; Business Development Manager · Built with passion for the decentralized future
       </p>
     </footer>
   )

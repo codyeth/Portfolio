@@ -577,8 +577,11 @@ function Footer() {
       className="border-t px-6 py-8 text-center"
       style={{ borderColor: 'var(--stroke)' }}
     >
-      <p className="text-xs" style={{ color: 'var(--muted)' }}>
-        © 2026 Nguyễn Văn Quân · Project Manager &amp; Business Development Manager · Built with passion for the decentralized future
+      <p className="text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+        © 2026 Nguyễn Văn Quân <span className="mx-1" aria-hidden="true">·</span> Marketing Lead
+      </p>
+      <p className="mt-2 text-xs leading-relaxed" style={{ color: 'var(--muted)' }}>
+        Built with passion for the decentralized future
       </p>
     </footer>
   )
